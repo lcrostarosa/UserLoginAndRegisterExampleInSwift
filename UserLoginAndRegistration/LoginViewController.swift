@@ -9,22 +9,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     @IBAction func loginButtonTapped(sender: AnyObject) {
         
         let userEmail = userEmailTextField.text;
@@ -40,9 +40,9 @@ class LoginViewController: UIViewController {
             {
                 // Login is successfull
                 NSUserDefaults.standardUserDefaults().setBool(true,forKey:"isUserLoggedIn");
-                    NSUserDefaults.standardUserDefaults().synchronize();
+                NSUserDefaults.standardUserDefaults().synchronize();
                 
-               self.dismissViewControllerAnimated(true, completion:nil);
+                self.dismissViewControllerAnimated(true, completion:nil);
             }
         }
         
@@ -51,12 +51,12 @@ class LoginViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
